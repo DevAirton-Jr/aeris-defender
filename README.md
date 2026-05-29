@@ -51,12 +51,3 @@ O projeto foi moldado seguindo princípios de **Clean Architecture** e forte sep
    # No Linux/Mac
    ./gradlew run
    ```
-
-## 🛠️ Roadmap Futuro
-- [ ] **Integração com Computação Quântica (A.I. Cloud):** Chamadas para processadores quânticos reais via API (IBM Qiskit / AWS Braket) rodando Quantum Support Vector Machines (QSVM) para caçar malwares polimórficos de alta complexidade.
-- [ ] **Post-Quantum Cryptography (PQC):** Trancar o cofre da Quarentena usando algoritmos resistentes a ataques quânticos (Kyber/Dilithium), garantindo selamento criptográfico inquebrável.
-- [ ] **QRNG (Quantum Random Number Generation):** Geração de chaves criptográficas militarizadas baseadas no comportamento de fótons reais medidos na nuvem para blindar o Sentinel.
-- [ ] Refinamento e persistência da Quarentena em banco de dados SQLite.
-- [ ] Firewall integrado e Monitor de Tráfego Web.
-
----
