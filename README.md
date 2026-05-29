@@ -4,13 +4,13 @@
   <img src="https://img.shields.io/badge/JavaFX-1D2951?style=for-the-badge&logo=javafx&logoColor=white" />
   <br/>
   <h1>🛡️ SentinelAV</h1>
-  <p><strong>Antivírus Heurístico de Alta Performance com Interface Cyberpunk</strong></p>
+  <p><strong>Antivírus Heurístico de Alta Performance</strong></p>
 </div>
 
 ---
 
 ## 📖 Sobre o Projeto
-O **SentinelAV** é um ecossistema de proteção local construído em Java. Ele não é apenas um scanner de diretórios, mas um motor antivírus completo (em construção) que conta com análise heurística, checagem de Magic Bytes, detecção de pacotes (Packer Detection) e proteção de arquivos em tempo real. Tudo isso embalado em uma interface JavaFX hiper-moderna de alto contraste no estilo Hacker/Cyberpunk.
+O **SentinelAV** é um ecossistema de proteção local construído em Java. Ele não é apenas um scanner de diretórios, mas um motor antivírus completo (em construção) que conta com análise heurística, checagem de Magic Bytes, detecção de pacotes (Packer Detection) e proteção de arquivos em tempo real. Tudo isso embalado em uma interface JavaFX.
 
 ## 🏗️ Arquitetura do Sistema
 O projeto foi moldado seguindo princípios de **Clean Architecture** e forte separação de responsabilidades (SOLID). O coração do Sentinel roda desacoplado da interface gráfica (UI), garantindo máxima performance e escalabilidade.
@@ -59,4 +59,3 @@ O projeto foi moldado seguindo princípios de **Clean Architecture** e forte sep
 - [ ] Firewall integrado e Monitor de Tráfego Web.
 
 ---
-> *"Onde quer que um byte malicioso tente se esconder, o Sentinel começa aqui."*
