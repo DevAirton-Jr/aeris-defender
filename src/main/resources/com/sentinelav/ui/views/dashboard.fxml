@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.TextArea?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sentinelav.ui.controllers.DashboardController">
+   <padding>
+      <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+   </padding>
+   <children>
+      <!-- HEADER -->
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <VBox>
+               <children>
+                  <Label styleClass="page-title" text="Visão Geral" />
+                  <Label styleClass="page-subtitle" text="Monitoramento em tempo real ativo." />
+               </children>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#refreshStats" styleClass="btn-outline" text="Atualizar Dados" />
+         </children>
+      </HBox>
+
+      <!-- FIRST ROW CARDS -->
+      <HBox spacing="20.0" VBox.vgrow="NEVER">
+         <children>
+            <!-- SYSTEM PROTECTED CARD -->
+            <VBox spacing="10.0" styleClass="aegis-card" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label styleClass="card-header-text" text="STATUS DO SISTEMA" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <StackPane prefHeight="70.0" prefWidth="70.0" styleClass="shield-circle">
+                                 <children>
+                                    <Label styleClass="shield-circle-icon" text="🛡" />
+                                 </children>
+                              </StackPane>
+                              <Button fx:id="shieldButton" mnemonicParsing="false" onAction="#toggleShield" style="-fx-background-color: transparent; -fx-text-fill: #00e5ff; -fx-font-weight: bold; -fx-cursor: hand;" text="ESCUDO ON" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label styleClass="card-title" text="System Protected" />
+                  <Label styleClass="card-subtitle" text="Todas as defesas perimetrais operacionais.&#10;Nenhuma atividade anômala detectada nas últimas&#10;24 horas." wrapText="true" />
+               </children>
+            </VBox>
+
+            <!-- STATS CARDS -->
+            <VBox spacing="20.0" prefWidth="250.0">
+               <children>
+                  <VBox spacing="5.0" styleClass="aegis-card" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="card-header-text" text="TOTAL VERIFICADOS" />
+                        <HBox alignment="BASELINE_LEFT" spacing="5.0">
+                           <children>
+                              <Label fx:id="totalScannedLabel" styleClass="card-value-big" text="0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" styleClass="aegis-card" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="card-header-text" text="AMEAÇAS ENCONTRADAS" />
+                        <HBox alignment="BASELINE_LEFT" spacing="5.0">
+                           <children>
+                              <Label fx:id="suspiciousLabel" styleClass="card-value-big" style="-fx-text-fill: #ff4a4a;" text="0" />
+                              <Label styleClass="card-subtitle" text="em quarentena" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <!-- SECOND ROW CARDS -->
+      <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- ANALYSIS PIECHART -->
+            <VBox spacing="10.0" styleClass="aegis-card" prefWidth="300.0">
+               <children>
+                  <Label styleClass="card-header-text" text="ANÁLISE DE ARQUIVOS" />
+                  <PieChart fx:id="statsChart" legendVisible="false" prefHeight="250.0" />
+               </children>
+            </VBox>
+
+            <!-- LIVE LOG TERMINAL -->
+            <VBox spacing="10.0" styleClass="aegis-card" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label styleClass="card-header-text" text="LOG DO SISTEMA" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Label styleClass="card-header-text" text="● Live" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="logArea" editable="false" styleClass="terminal-area" wrapText="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

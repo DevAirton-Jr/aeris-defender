@@ -1,0 +1,295 @@
+/* Sentinel System Shield - Cyberpunk Dark Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Orbitron:wght@400;700;900&family=Fira+Code&display=swap');
+
+* {
+    -fx-font-family: 'Inter', sans-serif;
+}
+
+.root-pane {
+    -fx-background-color: #111216;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    -fx-background-color: #101115;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #1e1f26;
+    -fx-pref-width: 260px;
+}
+
+.sidebar-title-logo {
+    -fx-font-family: 'Orbitron', sans-serif;
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #00e5ff;
+}
+
+.sidebar-version {
+    -fx-font-family: 'Fira Code', 'Consolas', monospace;
+    -fx-font-size: 12px;
+    -fx-text-fill: #aaaaaa;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #bbbbbb;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20 12 40;
+    -fx-cursor: hand;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-color: transparent;
+}
+
+.nav-button:hover {
+    -fx-background-color: #17181e;
+    -fx-text-fill: #ffffff;
+}
+
+.nav-button-active {
+    -fx-background-color: #122228;
+    -fx-text-fill: #00e5ff;
+    -fx-border-color: transparent #00e5ff transparent transparent;
+    -fx-border-width: 0 4 0 0;
+}
+
+.nav-full-scan {
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #111216;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-padding: 12 20;
+}
+.nav-full-scan:hover {
+    -fx-background-color: #33eeff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.6), 15, 0, 0, 0);
+}
+
+/* --- TYPOGRAPHY & HEADERS --- */
+.page-title {
+    -fx-font-size: 42px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #ffffff;
+}
+.page-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bbbbbb;
+    -fx-font-family: 'Consolas', monospace;
+}
+.top-nav-link {
+    -fx-font-size: 14px;
+    -fx-text-fill: #aaaaaa;
+    -fx-cursor: hand;
+}
+.top-nav-link:hover {
+    -fx-text-fill: #ffffff;
+}
+.top-logo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00e5ff;
+}
+
+/* --- CARDS --- */
+.aegis-card {
+    -fx-background-color: #15161c;
+    -fx-background-radius: 8;
+    -fx-border-color: #22232b;
+    -fx-border-radius: 8;
+    -fx-padding: 20;
+}
+.aegis-card:hover {
+    -fx-border-color: #00e5ff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.15), 15, 0, 0, 0);
+}
+
+/* Card titles */
+.card-header-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #00e5ff;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+.card-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+.card-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bbbbbb;
+}
+.card-value-big {
+    -fx-font-family: 'Orbitron', sans-serif;
+    -fx-font-size: 48px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #ffffff;
+}
+.card-value-small {
+    -fx-font-family: 'Orbitron', sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #00e5ff;
+}
+.card-label-gray {
+    -fx-font-size: 10px;
+    -fx-text-fill: #888888;
+    -fx-font-weight: bold;
+}
+
+/* --- SHIELD ICON / BUTTONS --- */
+.shield-circle {
+    -fx-background-color: #111216;
+    -fx-border-color: #00e5ff;
+    -fx-border-width: 2;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.4), 20, 0, 0, 0);
+}
+.shield-circle-icon {
+    -fx-font-size: 32px;
+    -fx-text-fill: #00e5ff;
+}
+
+.btn-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: #00e5ff;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-text-fill: #00e5ff;
+    -fx-padding: 8 15;
+    -fx-cursor: hand;
+}
+.btn-outline:hover {
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #111216;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.4), 10, 0, 0, 0);
+}
+
+/* --- SCANNER SPECIFIC --- */
+.scan-ring {
+    -fx-stroke: #00e5ff;
+    -fx-stroke-width: 8;
+    -fx-fill: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.6), 25, 0, 0, 0);
+}
+.scan-ring-bg {
+    -fx-stroke: #22232b;
+    -fx-stroke-width: 8;
+    -fx-fill: transparent;
+}
+.scan-percentage {
+    -fx-font-family: 'Orbitron', sans-serif;
+    -fx-font-size: 48px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #00e5ff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.8), 10, 0, 0, 0);
+}
+
+.huge-scan-button {
+    -fx-font-family: 'Orbitron', sans-serif;
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #111216;
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-background-radius: 8;
+    -fx-padding: 20 40;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.4), 20, 0, 0, 0);
+}
+.huge-scan-button:hover {
+    -fx-background-color: #33eeff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 229, 255, 0.8), 30, 0, 0, 0);
+}
+.huge-scan-button:disabled {
+    -fx-background-color: #333333;
+    -fx-text-fill: #888888;
+    -fx-effect: none;
+}
+
+/* --- TERMINAL --- */
+.terminal-area {
+    -fx-control-inner-background: #111216;
+    -fx-background-color: #111216;
+    -fx-text-fill: #bbbbbb;
+    -fx-font-family: 'Fira Code', 'Consolas', monospace;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+}
+.terminal-area .content {
+    -fx-background-color: #111216;
+}
+
+/* Alerts */
+.text-danger { -fx-text-fill: #ff4a4a; }
+.text-cyan { -fx-text-fill: #00e5ff; }
+
+/* TableView (Quarantine) */
+.table-view {
+    -fx-background-color: #15161c;
+    -fx-control-inner-background: #15161c;
+    -fx-border-color: #22232b;
+    -fx-border-radius: 8;
+}
+.table-view .column-header {
+    -fx-background-color: #101115;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #bbbbbb;
+    -fx-font-weight: bold;
+}
+.table-row-cell {
+    -fx-background-color: #15161c;
+    -fx-text-fill: white;
+}
+.table-row-cell:odd {
+    -fx-background-color: #111216;
+}
+.table-row-cell:selected {
+    -fx-background-color: #122228;
+    -fx-text-fill: #00e5ff;
+}
+.table-view .cell {
+    -fx-text-fill: white;
+}
+
+/* Update inner ring */
+.scan-ring-inner {
+    -fx-stroke: #444455;
+    -fx-stroke-width: 2;
+    -fx-fill: transparent;
+    -fx-opacity: 0.5;
+}
+
+/* Settings toggles */
+.setting-row {
+    -fx-padding: 15 0;
+    -fx-border-color: #22232b transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.setting-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+.setting-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #888888;
+}
+
+.cyber-toggle {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+.cyber-toggle .box {
+    -fx-background-color: #111216;
+    -fx-border-color: #00e5ff;
+    -fx-border-radius: 4;
+}
+.cyber-toggle:selected .mark {
+    -fx-background-color: #00e5ff;
+}

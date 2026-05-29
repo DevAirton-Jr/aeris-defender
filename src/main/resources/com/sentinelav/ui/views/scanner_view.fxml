@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sentinelav.ui.controllers.ScannerController">
+   <padding>
+      <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+   </padding>
+   <children>
+      <!-- HEADER -->
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <VBox>
+               <children>
+                  <Label styleClass="page-title" text="Varredura do Sistema" />
+                  <Label styleClass="page-subtitle" text="Análise de ameaças em tempo real e verificação de integridade." />
+               </children>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" styleClass="btn-outline" text="● Engine: ATIVO" />
+         </children>
+      </HBox>
+
+      <HBox spacing="30.0" VBox.vgrow="ALWAYS">
+         <children>
+            <!-- LEFT PANEL: CONTROLS -->
+            <VBox spacing="20.0" prefWidth="350.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="30.0" styleClass="aegis-card" VBox.vgrow="ALWAYS">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Circle fill="transparent" radius="90.0" styleClass="scan-ring-bg" />
+                              <Circle fx:id="animatedRing" fill="transparent" radius="90.0" styleClass="scan-ring" strokeDashArray="565.48" strokeDashOffset="565.48" rotate="-90" />
+                              <Circle fx:id="innerRing" fill="transparent" radius="75.0" styleClass="scan-ring-inner" strokeDashArray="50, 150" strokeDashOffset="0" />
+                              <Label fx:id="progressLabel" styleClass="scan-percentage" text="0%" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="scanButton" mnemonicParsing="false" onAction="#startScan" styleClass="huge-scan-button" text="INICIAR&#10;VARREDURA&#10;COMPLETA" textAlignment="CENTER" />
+                        <Label fx:id="timeLabel" styleClass="card-subtitle" text="Pronto para Iniciar" />
+                     </children>
+                     <padding>
+                        <Insets bottom="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <HBox spacing="10.0">
+                     <children>
+                        <VBox spacing="5.0" styleClass="aegis-card" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="card-header-text" text="ARQUIVOS ANALISADOS" />
+                              <Label fx:id="filesScannedLabel" styleClass="card-value-big" style="-fx-font-size: 28px;" text="0" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="5.0" styleClass="aegis-card" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="card-header-text" text="AMEAÇAS DETECTADAS" />
+                              <Label fx:id="threatsDetectedLabel" styleClass="card-value-big" style="-fx-text-fill: #ff4a4a; -fx-font-size: 28px;" text="0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <!-- RIGHT PANEL: TERMINAL -->
+            <VBox spacing="10.0" styleClass="aegis-card" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="card-header-text" text="TERMINAL DE LOG" />
+                  <TextArea fx:id="logArea" editable="false" styleClass="terminal-area" wrapText="true" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

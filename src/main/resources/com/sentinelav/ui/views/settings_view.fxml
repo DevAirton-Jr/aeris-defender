@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sentinelav.ui.controllers.SettingsController">
+   <padding>
+      <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+   </padding>
+   <children>
+      <VBox>
+         <children>
+            <Label styleClass="page-title" text="Configurações" />
+            <Label styleClass="page-subtitle" text="Ajuste o comportamento do Sentinel Shield." />
+         </children>
+      </VBox>
+      <VBox spacing="15.0" styleClass="aegis-card" VBox.vgrow="ALWAYS">
+         <children>
+            <Label styleClass="card-header-text" text="PREFERÊNCIAS DO MOTOR (ENGINE)" />
+            
+            <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="setting-row">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="setting-title" text="Heurística Agressiva (Deep Magic Bytes)" />
+                        <Label styleClass="setting-subtitle" text="Inspeciona não apenas executáveis, mas PDFs, JPGs e DLLs a fundo." />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="deepScanToggle" styleClass="cyber-toggle" selected="true" />
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="setting-row">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="setting-title" text="Auto-Quarentena Severa" />
+                        <Label styleClass="setting-subtitle" text="Move arquivos com pontuação de risco alta imediatamente sem notificar." />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="autoQuarantineToggle" styleClass="cyber-toggle" selected="true" />
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="setting-row">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="setting-title" text="Monitoramento de Tráfego de Rede" />
+                        <Label styleClass="setting-subtitle" text="Escuta portas vulneráveis e conexões não seguras. (Experimental)" />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="networkToggle" styleClass="cyber-toggle" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
